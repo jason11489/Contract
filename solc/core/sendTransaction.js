@@ -1,5 +1,5 @@
-import Constants from './constants';
-import Keys from './keys';
+import Constants from './constants.js';
+import Keys from './keys.js';
 
 
 export async function sendTransaction(

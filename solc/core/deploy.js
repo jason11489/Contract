@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import url from 'url';
-import Constants from './constants';
-import sendTransaction from './sendTransaction';
+import Constants from './constants.js';
+import sendTransaction from './sendTransaction.js';
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 console.log(__dirname);

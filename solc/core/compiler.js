@@ -10,6 +10,7 @@ import { compileImports, writeCompiledContractAbiAndBytecode } from './readWrite
 export default function (basePath, contractName) {
     const sources = {};
     compileImports(basePath, sources);
+    console.log({ source: sources });
     var input = {
         language: 'Solidity',
         sources: sources,
@@ -23,6 +24,8 @@ export default function (basePath, contractName) {
         },
     };
     const output = solc.compile(JSON.stringify(input));
+
+    console.log({ output: output });
 
     const contract = JSON.parse(output);
     if(Array.isArray(contract.errors)) {

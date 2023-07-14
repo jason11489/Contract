@@ -1,15 +1,21 @@
 {
     "scripts": {
-        "compileContract": "node --experimental-specifier-resolution=node solc/scripts/compileContract.js",
+        "compileContract": "node solc/scripts/compileContract.js",
         "deployContract": "node --experimental-specifier-resolution=node solc/scripts/deployContract.js"
     },
     "dependencies": {
-        "fs": "^0.0.1-security",
         "fs-extra": "^11.1.1",
         "lodash": "^4.17.21",
         "path": "^0.12.7",
-        "solc": "0.8.20",
+        "react-native-fs": "^2.20.0",
+        "solc": "^0.8.20",
         "url": "~0.11.0",
         "web3": "1.10.0"
-    }
+    },
+    "name": "contract",
+    "description": "",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "",
+    "license": "ISC"
 }
