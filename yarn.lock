@@ -5549,10 +5549,10 @@ slice-ansi@^2.0.0:
     astral-regex "^1.0.0"
     is-fullwidth-code-point "^2.0.0"
 
-solc@^0.8.20:
-  version "0.8.20"
-  resolved "https://registry.npmjs.org/solc/-/solc-0.8.20.tgz"
-  integrity sha512-fPRnGspIEqmhu63RFO3pc79sLA7ZmzO0Uy0L5l6hEt2wAsq0o7UV6pXkAp3Mfv9IBhg7Px/oTu3a+y4gs3BWrQ==
+solc@0.8.18:
+  version "0.8.18"
+  resolved "https://registry.npmjs.org/solc/-/solc-0.8.18.tgz"
+  integrity sha512-wVAa2Y3BYd64Aby5LsgS3g6YC2NvZ3bJ+A8TAIAukfVuQb3AjyGrLZpyxQk5YLn14G35uZtSnIgHEpab9klOLQ==
   dependencies:
     command-exists "^1.2.8"
     commander "^8.1.0"
