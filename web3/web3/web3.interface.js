@@ -1,8 +1,8 @@
-import Web3 from 'web3';
-import Constants from '../constants';
-import types, { addPrefixHex } from '../../utils/types';
 import _ from 'lodash';
-import LocalStorage from '../../utils/async.storage';
+import Web3 from 'web3';
+import LocalStorage from '../../utils/async.storage.js';
+import types, { addPrefixHex } from '../../utils/types.js';
+import Constants from '../constants.js';
 
 export default class Web3Interface extends Web3 {
     /**
@@ -32,6 +32,7 @@ export default class Web3Interface extends Web3 {
      * @param {Number} gas (Optional) The gas provided by transaction.
      * @param {String} value (Optional) The value of the transaction in wei.
      * @returns {Promise<TransactionReceipt>} A promise combined event emitter. Resolves when the transaction receipt is available.
+     * send function that alter variable of contract
      */
     async sendContractCall(
         call,
@@ -88,6 +89,8 @@ export default class Web3Interface extends Web3 {
      *
      * @param {Object} call The transaction object
      * @returns {Promise<any>} Promise returns Mixed: The return value(s) of the smart contract method
+     * call function that do not alter variable of contract
+     * pure, view contract function
      */
     localContractCall(call) {
         return call.call();
