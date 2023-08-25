@@ -1,6 +1,6 @@
-import Constants from '../constants';
-import Web3Interface from '../web3/web3.interface';
-import CompiledStorage from './compiled';
+import Constants from '../../utils/constants.js';
+import Web3Interface from '../web3/web3.interface.js';
+import CompiledStorage from './compiled.js';
 
 export default class Contract extends Web3Interface {
     constructor(endpoint, deployedAddress) {

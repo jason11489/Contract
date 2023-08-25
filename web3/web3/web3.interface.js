@@ -1,8 +1,7 @@
 import _ from 'lodash';
 import Web3 from 'web3';
-import LocalStorage from '../../utils/async.storage.js';
+import Constants from '../../solc/core/constants.js';
 import types, { addPrefixHex } from '../../utils/types.js';
-import Constants from '../constants.js';
 
 export default class Web3Interface extends Web3 {
     /**
@@ -166,7 +165,7 @@ export default class Web3Interface extends Web3 {
         privateKey,
         gas = Constants.DEFAULT_LEGACY_TRANSFER_GAS,
     ) {
-        const isTimeout = await LocalStorage.getData('IS_TIMEOUT');
+        // const isTimeout = await LocalStorage.getData('IS_TIMEOUT');
         if(isTimeout === true || isTimeout === 'true') {
             return ;
         }

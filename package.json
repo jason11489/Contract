@@ -1,18 +1,17 @@
 {
-
-
     "type": "module",
     "scripts": {
         "compileContract": "node solc/scripts/compileContract.js",
         "deployContract": "node --experimental-specifier-resolution=node solc/scripts/deployContract.js",
-        "test" : "node web3/test.js"
+        "test": "node --experimental-specifier-resolution=node web3/test.js",
+        "test2": "node --experimental-specifier-resolution=node web3/test2.js",
+        "ganache": "sh scripts/runTestNet.sh",
+        "deploy": "sh scripts/deployContracts.sh"
     },
     "dependencies": {
         "fs-extra": "^11.1.1",
         "lodash": "^4.17.21",
         "path": "^0.12.7",
-        "react-native-config": "^1.5.1",
-        "react-native-fs": "^2.20.0",
         "solc": "0.8.18",
         "url": "~0.11.0",
         "web3": "1.10.0"
