@@ -3,8 +3,7 @@
     "scripts": {
         "compileContract": "node solc/scripts/compileContract.js",
         "deployContract": "node --experimental-specifier-resolution=node solc/scripts/deployContract.js",
-        "test": "node --experimental-specifier-resolution=node web3/test.js",
-        "test2": "node --experimental-specifier-resolution=node web3/test2.js",
+        "test": "node web3/test.js",
         "ganache": "sh scripts/runTestNet.sh",
         "deploy": "sh scripts/deployContracts.sh"
     },

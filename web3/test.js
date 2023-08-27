@@ -1,27 +1,28 @@
+
+import Web3 from "web3";
 import CompiledStorage from "./Storage/compiled.js";
 
 
-import Web3 from "web3";
-
-const web3 = new Web3("http://0.0.0.0:8545");
-
-const ContractAddress = "0xb05b2c8242bc9690ffd9e4f2ef15a74a31194702";
-
-const storage = new web3
-    .eth
-    .Contract(CompiledStorage.abi, ContractAddress);
+const web3 = new Web3(Web3.givenProvider || "http://0.0.0.0:8545");
 
 
 
-let txDescription = {
-    from: "0x3152727d3a2ee8a0f4bf8322b1dc49f63599b1d1da2604bda5fcb480f5c8ce3f",
-}
+web3.eth.defaultAccount = "0x9f6159c085141b3e50971F26ffC85BC86cFAb94e";
 
-await storage.methods.store("4").send(txDescription).then(console.log);
+const MyContract = new web3.eth.Contract(CompiledStorage.abi, "0xb4D1dAe798Cd7cf31BB492A42C0dE4E9CeA131D2");
 
-await storage
-    .methods
-    .retrieve()
-    .call()
-    .then(console.log);
+await MyContract.methods.store("22").send({ from: web3.eth.defaultAccount });
+
+await MyContract.methods.retrieve().call().then(console.log);
+
+
+
+
+await MyContract.methods.store("213123123").send({ from: web3.eth.defaultAccount });
+
+await MyContract.methods.retrieve().call().then(console.log);
+
+
+
+// await web3.eth.getAccounts(console.log);
 
